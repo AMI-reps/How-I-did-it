@@ -28,6 +28,7 @@ conda create -n tensorflow python=3.5 # this creates a new environment called te
 conda activate tensorflow # it activates the new environment
 conda install pandas matplotlib jupyter notebook scipy scikit-learn # it installs the most used libraries
 pip3 install tensorflow-gpu #it installs the tensorflow library with gpu support
+conda install nb_conda #installs nb_conda for easily managing/switching notebook kernel
 
 # exit the terminal #this makes the changes take place
 # everytime you want to work with tensorflow open a new terminal. it will be in the base environment. change it to the tensorflow created above with:
