@@ -1,0 +1,44 @@
+# install the latest versions of all things. assumes anaconda is installed.
+# make sure I have ndivia: install 418.67 driver
+
+# open a terminal and type
+
+wget https://developer.nvidia.com/compute/cuda/10.1/Prod/local_installers/cuda-repo-ubuntu1804-10-1-local-10.1.168-418.67_1.0-1_amd64.deb
+
+sudo dpkg -i cuda-repo-ubuntu1804-10-1-local-10.1.168-418.67_1.0-1_amd64.deb 
+
+sudo apt-key add /var/cuda-repo-<version>/7fa2af80.pub
+
+sudo apt-get update
+
+sudo apt-get install cuda
+
+# register to https://developer.nvidia.com/rdp/cudnn-archive in order to download cudNN
+# then go to https://developer.nvidia.com/rdp/cudnn-archive 
+# click Download cuDNN v7.6.1 (June 24, 2019), for CUDA 10.1
+# click to download cuDNN Runtime Library for Ubuntu18.04 (Deb) (it will require to be logged in)
+
+sudo dpkg -i libcudnn7_7.6.1.34-1+cuda10.1_amd64.deb
+
+conda create -n tensorflow python=3.5 # this creates a new environment called tensorflow and sets python3
+conda activate tensorflow # it activates the new environment
+conda install pandas matplotlib jupyter notebook scipy scikit-learn # it installs the most used libraries
+pip3 install tensorflow-gpu
+
+# exit the terminal #this makes the changes take place
+# everytime you want to work with tensorflow open a new terminal. it will be in the base environment. change it to the tensorflow created above with:
+conda activate tensorflow
+
+# choose either to work in the terminal or in the jupiter notebook
+# in the terminal:
+python3
+import tensorflow -> this should not give errors.
+
+#to open jupyter notebook
+jupiter notebook
+#go to the desired folder, create a new file and set the kernel as tensorflow*
+#start writing your code
+#import tensorflow.keras....
+
+
+
