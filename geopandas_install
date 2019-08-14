@@ -1,0 +1,24 @@
+#some useful resources: 
+http://geopandas.org/install.html
+http://geopandas.org/install.html#dependencies
+
+#open terminal
+
+conda create -n geopandas_env
+conda activate geopandas_env
+conda config --env --add channels conda-forge
+conda config --env --set channel_priority strict
+conda install python=3 geopandas
+conda install matplotlib
+conda install jupyter notebook
+conda install descartes
+conda install nb_conda #do not forget it whenever working with multiple environments
+conda install contextily
+conda install geoplot
+conda install mapclassify
+
+#exit terminal
+#open new terminal
+
+conda activate geopandas-env
+jupyter notebook
