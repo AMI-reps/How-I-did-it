@@ -1,5 +1,9 @@
 # install the latest versions of all things. assumes anaconda is installed.
-# make sure I have ndivia: install 418.67 driver
+# make sure I have ndivia newest (418.67) driver 
+    # press window button, type drivers, the Software and Updated window opens up, go to Additional drivers.
+    # if the newest (418.67) version driver is NOT checked then go to terminal and type
+    # sudo apt-get -o Dpkg::Options::="--force-overwrite" install --fix-broken
+    # then check again- the newest driver should be set
 
 # open a terminal and type
 
@@ -23,7 +27,7 @@ sudo dpkg -i libcudnn7_7.6.1.34-1+cuda10.1_amd64.deb
 conda create -n tensorflow python=3.5 # this creates a new environment called tensorflow and sets python3
 conda activate tensorflow # it activates the new environment
 conda install pandas matplotlib jupyter notebook scipy scikit-learn # it installs the most used libraries
-pip3 install tensorflow-gpu
+pip3 install tensorflow-gpu #it installs the tensorflow library with gpu support
 
 # exit the terminal #this makes the changes take place
 # everytime you want to work with tensorflow open a new terminal. it will be in the base environment. change it to the tensorflow created above with:
