@@ -1,3 +1,8 @@
+#some useful resources:
+https://medium.com/@margaretmz/anaconda-jupyter-notebook-tensorflow-and-keras-b91f381405f8
+https://stackoverflow.com/questions/43216256/running-tensorflow-in-jupyter-notebook/43259471
+
+
 # install the latest versions of all things. assumes anaconda is installed.
 # make sure I have ndivia newest (418.67) driver 
     # press window button, type drivers, the Software and Updated window opens up, go to Additional drivers.
